@@ -10,7 +10,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true, // should we add?
     "module": "ESNext",
-    "moduleResolution": "Node", // bundler - Node?
+    "moduleResolution": "bundler", // bundler - Node?
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true, // added from video

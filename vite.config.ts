@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import dts from "vite-plugin-dts";
+import tailwindcss from "@tailwindcss/vite";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 export default defineConfig({
   build: {
@@ -30,5 +32,10 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true,
   },
-  plugins: [react(), dts()],
+  plugins: [
+    react(),
+    dts(),
+    tailwindcss(), // Use Tailwind's Vite plugin
+    cssInjectedByJsPlugin(), // This will inject the generated CSS into your JS bundle
+  ],
 });
