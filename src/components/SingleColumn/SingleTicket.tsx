@@ -14,7 +14,7 @@ function SingleTicket({
   if (!ticket) return null;
 
   return (
-    <Card className="shadow-sm hover:shadow-md transition-shadow p-0 max-w-full flex flex-col items-stretch">
+    <Card className="shadow-sm hover:shadow-md transition-shadow p-0 max-w-full flex flex-col items-stretch border-gray-300">
       <CardHeader className="p-3 pb-0 max-w-full">
         <DialogTrigger
           onClick={() => setSelectedTicket(ticket)}
