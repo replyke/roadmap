@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // ES2020- ESNext?
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"], // ["ES2020", "DOM", "DOM.Iterable"]  -  ["ESNext", "DOM", "DOM.Iterable"]
+    "allowJs": false, // should we add?
+    "skipLibCheck": true,
+    "esModuleInterop": false, // should we add?
+    "allowSyntheticDefaultImports": true, // should we add?
+    "strict": true,
+    "forceConsistentCasingInFileNames": true, // should we add?
+    "module": "ESNext",
+    "moduleResolution": "Node", // bundler - Node?
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true, // added from video
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"],
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "./index.ts"],
+  "exclude": ["recycle_bin", "./recycle_bin", "recycle_bin/**/*"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
