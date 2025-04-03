@@ -35,7 +35,7 @@ function Roadmap({
             columnId={selectedTicketStage}
           />
         </EntityProvider>
-        <div className="p-4 w-max overflow-x-auto flex gap-4 flex-1">
+        <div className="w-max flex gap-4">
           {columns.map((column) => (
             <FeedProvider
               resource="roadmap"
