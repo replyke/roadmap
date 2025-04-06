@@ -20,7 +20,7 @@ function SingleTicket({
           onClick={() => setSelectedTicket(ticket)}
           className="cursor-pointer block max-w-full"
         >
-          <CardTitle className="text-left text-base font-medium text-sky-950 hover:underline">
+          <CardTitle className="text-left text-sm font-medium text-sky-950 hover:underline">
             {ticket.title}
           </CardTitle>
           {/* <CardDescription className="block text-left text-sky-950 text-sm whitespace-normal">

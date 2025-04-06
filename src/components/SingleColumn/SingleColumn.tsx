@@ -19,7 +19,7 @@ function SingleColumn({
   const [showInput, setShowInput] = useState(false);
 
   return (
-    <div key={column.id} className="flex-shrink-0 w-80">
+    <div key={column.id} className="flex-shrink-0 w-60">
       <div className="bg-gray-50 rounded-lg p-3 h-full flex flex-col w-full">
         <div className="flex justify-between items-center mb-3">
           <StageBadge columnId={column.id} />
