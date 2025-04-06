@@ -14,13 +14,13 @@ function SingleTicket({
   if (!ticket) return null;
 
   return (
-    <Card className="shadow-sm hover:shadow-md transition-shadow p-0 max-w-full flex flex-col items-stretch border-gray-300">
-      <CardHeader className="p-3 pb-0 max-w-full">
+    <Card className="shadow-sm hover:shadow-md transition-shadow p-0 max-w-full flex flex-col items-stretch border-gray-300 rounded-md gap-3">
+      <CardHeader className="p-2 pb-0 max-w-full">
         <DialogTrigger
           onClick={() => setSelectedTicket(ticket)}
           className="cursor-pointer block max-w-full"
         >
-          <CardTitle className="text-left text-sm font-medium text-sky-950 hover:underline">
+          <CardTitle className="text-left text-xs font-medium text-sky-950 hover:underline">
             {ticket.title}
           </CardTitle>
           {/* <CardDescription className="block text-left text-sky-950 text-sm whitespace-normal">
@@ -29,7 +29,7 @@ function SingleTicket({
         </DialogTrigger>
       </CardHeader>
 
-      <CardContent className="p-3 pt-0 flex justify-between items-center">
+      <CardContent className="p-2 pt-0 flex justify-between items-center">
         <div className="flex items-center gap-1 text-muted-foreground">
           <MessageSquare className="h-4 w-4" />
           <span className="text-xs">{ticket.repliesCount}</span>
