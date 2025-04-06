@@ -50,9 +50,9 @@ function SingleColumn({
           )}
         </AnimatePresence>
 
-        <div className="space-y-3 flex-grow mt-2 w-full">
+        <div className="space-y-2 flex-grow mt-2 w-full">
           {resetting ? (
-            <LoaderCircleIcon className="size-6 animate-spin mx-auto my-4" />
+            <LoaderCircleIcon className="size-4 text-gray-400 animate-spin mx-auto my-4" />
           ) : (entities || []).length === 0 ? (
             <p className="text-center text-gray-400 text-sm p-4">
               Nothing here yet

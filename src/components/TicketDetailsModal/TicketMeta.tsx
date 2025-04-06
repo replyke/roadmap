@@ -16,7 +16,7 @@ function TicketMeta({
 }) {
   const { user } = useUser();
   return (
-    <div className="flex flex-col divide-y p-0">
+    <div className="flex flex-col divide-y divide-gray-200 p-0">
       <div className="px-4 py-5 flex flex-col gap-4">
         <div className="grid grid-cols-5 items-center">
           <div className="col-span-2 text-sm font-medium text-gray-500">
