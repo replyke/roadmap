@@ -54,7 +54,7 @@ function SingleColumn({
           {resetting ? (
             <LoaderCircleIcon className="size-6 animate-spin mx-auto my-4" />
           ) : (entities || []).length === 0 ? (
-            <p className="text-center text-gray-400 text-lg p-4">
+            <p className="text-center text-gray-400 p-4">
               Nothing here yet
             </p>
           ) : (

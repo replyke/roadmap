@@ -9,7 +9,6 @@ import { LoaderCircle } from "lucide-react";
 
 const TITLE_MIN = 10;
 const TITLE_MAX = 120;
-const DESCRIPTION_MIN = 30;
 const DESCRIPTION_MAX = 500;
 
 export default function AddTicket() {
@@ -27,11 +26,9 @@ export default function AddTicket() {
     }
 
     if (
-      !title ||
-      description.length < DESCRIPTION_MIN ||
       description.length > DESCRIPTION_MAX
     ) {
-      toast("Please add a valid description");
+      toast("Please try to shorten your description");
       return;
     }
 
