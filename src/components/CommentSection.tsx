@@ -12,7 +12,6 @@ import { toast } from "sonner";
 import { ScrollArea } from "./ui/scroll-area";
 
 function CommentSection() {
-  const [searchParams] = useSearchParams();
   const { entity } = useEntity();
 
   const callbacks: SocialStyleCallbacks = {
@@ -38,7 +37,6 @@ function CommentSection() {
     useSocialComments({
       entityId: entity?.id,
       callbacks,
-      highlightedCommentId: searchParams.get("commentId"),
       styleConfig,
       limit: 10,
     });
