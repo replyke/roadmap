@@ -20,8 +20,8 @@ function TicketDetailsModal({
 
   return (
     <DialogContent className="sm:max-w-5xl p-0 min-h-2/3 max-h-4/5 overflow-hidden">
-      <div className="grid grid-cols-3 w-full divide-x relative">
-        <div className="col-span-2 flex flex-col divide-y gap-8">
+      <div className="grid grid-cols-3 w-full divide-x divide-gray-200 relative">
+        <div className="col-span-2 flex flex-col divide-y divide-gray-200 gap-8">
           <TicketContent selectedTicket={selectedTicket} />
           <CommentSection />
         </div>
