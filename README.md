@@ -1,60 +1,134 @@
-Replyke - React Commenting System
-=================================
+# Replyke - Roadmap Component
 
-Welcome to Replyke, a robust and customizable commenting system designed specifically for React applications. Replyke offers a seamless way to integrate a dynamic comment section into your website, enhancing user engagement and interaction.
+A plug-and-play roadmap component built with [Replyke](https://replyke.com), allowing teams to share product development progress, collect feedback, and prioritize what's next—all in one place.
 
-Features
---------
+---
 
--   Seamless Integration: Easily add a comment section to your React.js application.
--   Customizable UI: Tailor the look and feel of your comment section to match your website's style.
--   Privacy-Focused: Replyke operates entirely within your application's infrastructure, ensuring user data privacy.
--   Versatile Backend Compatibility: Compatible with various backend setups, adaptable to your preferred technology stack.
--   Advanced Styling Options: Use Replyke's Design Studio for easy UI customization or apply inline styling for nuanced control.
+## 🚀 Overview
 
-Getting Started
----------------
+This package provides a simple yet powerful roadmap UI with four stages: **Backlog**, **Next**, **In Progress**, and **Done**. It supports commenting, voting, and content moderation, with role-based access control via the Replyke platform.
 
-### Installation
-
-Install Replyke via npm:
-
-`npm install replyke`
-
-### Basic Usage
-
-Integrate the Replyke comment section into your React application with ease:
+Ideal for SaaS products, internal tools, and any project needing a public or internal roadmap.
 
 
+
+## Demo
+See it in action for Replyke's actual [public roadmap.](https://roadmap.replyke.com/)
+
+![Demo](./assets/demo.gif)
+
+---
+
+## 🧠 About Replyke
+
+[Replyke](https://replyke.com) is a modular platform that enables developers to quickly integrate social and collaboration features like comments, votes, feeds, reports, and more.
+
+This roadmap component leverages Replyke's core features:
+
+- **Entities**: each ticket is an entity
+- **Comments**: threaded discussion on tickets
+- **Votes**: prioritize features with upvotes
+- **Reports & Moderation**: ensure quality content
+- **Role Management**: only admins can move tickets
+
+---
+
+## 📦 Installation
+
+```bash
+npm install @replyke/roadmap
+# or
+yarn add @replyke/roadmap
 ```
-import { CommentSection } from 'replyke';
 
-function App() {
+---
+
+## 💡 Usage
+
+```tsx
+import { useEffect, useState } from "react";
+import useAuth from "../hooks/useAuth";
+import useAxiosPrivate from "../config/useAxiosPrivate";
+import Roadmap from "@replyke/roadmap";
+
+export default function HomePage() {
+  const { client } = useAuth();
+  const axios = useAxiosPrivate();
+  const [signedToken, setSignedToken] = useState<string>();
+
+  useEffect(() => {
+    const handleSignJwt = async () => {
+      if (!client) return;
+      const response = await axios.get("/clients-auth/sign-jwt");
+      setSignedToken(response.data);
+    };
+
+    handleSignJwt();
+  }, [client, axios]);
+
   return (
-    <div className="App">
-      <CommentSection
-        entityId="UNIQUE_ARTICLE_ID"
-        styleId="YOUR_STYLE_ID"
-        callbacks={{
-          loginClickCallback: LOGIN_CALLBACK,
-        }}
-        // Additional configurations...
-      />
+    <div className="relative w-full flex-1 no-scrollbar flex justify-center pb-12">
+      <div className="overflow-x-auto w-full max-w-5xl px-4 sm:px-6 md:px-8 lg:px-12">
+        <Roadmap
+          projectId={import.meta.env.VITE_PUBLIC_REPLYKE_PROJECT_ID}
+          signedToken={signedToken}
+        />
+      </div>
     </div>
   );
 }
-``````
+```
 
-Documentation
--------------
+### Required Props
 
-For detailed instructions on how to integrate and use Replyke, including setting up API routes and customizing the user interface, please visit our comprehensive documentation at [Replyke Documentation](https://replyke.com/).
+- `projectId`: your Replyke project ID
+- `signedToken`: a JWT signed by your backend to authenticate the logged-in user
 
-Note
-----
+See [Replyke documentation](https://docs.replyke.com) for how to set up user auth and sign tokens.
 
-Replyke is not open source, and as such, there isn't a public GitHub repository for contributions or support. For any inquiries or direct support, please refer to the contact details provided on our [website](https://replyke.com/).
+---
 
+## 🔧 Features
+
+- 🧾 4-stage roadmap: Backlog → Next → In Progress → Done
+- 📝 Commenting and discussion on each ticket
+- 👍 Voting system to prioritize work
+- ⚠️ Built-in content reporting and moderation via Replyke dashboard
+- 🔒 Admin-only controls for moving tickets
+
+---
+
+## 🛠 Customization
+
+This package is ready to use out of the box, but developers who want full control can clone the source and modify the component as needed. Since it uses Replyke under the hood, most changes can be made with minimal backend configuration.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you’d like to improve the UI, add features, or fix bugs:
+
+1. Fork the repo
+2. Make your changes
+3. Open a pull request
+
+
+---
+
+## ✅ Final Notes
+
+This component is built on the idea that collaboration with your users can drive better decisions. Let your users help shape what you build next—with just a few lines of code.
+
+Happy building! 🚀
 
 ## License
-Replyke is provided under a proprietary license. The library is free to use in your applications, but redistribution or modification of the source code is not permitted. Some features of Replyke may be premium and subject to separate terms and conditions. Please refer to our [Terms of Service](https://replyke.com/terms) for more details.
+
+This repository is open-source under the **MIT License**.
+
+## Contributions
+
+Contributions are welcome! If you'd like to improve the comment section or add new UI components, feel free to submit a pull request. Join the Replyke community and help build better social UI components!
+
+## 📬 Support
+
+For questions or support, visit the [Replyke documentation](https://docs.replyke.com), open an issue or reach out via the [Discord server](https://discord.com/invite/REKxnCJzPz).
