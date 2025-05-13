@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Entity } from "@replyke/core";
+import { Entity } from "@replyke/react-js";
 import { DialogContent } from "../ui/dialog";
 import CommentSection from "../CommentSection";
 import { AnimatePresence } from "framer-motion";

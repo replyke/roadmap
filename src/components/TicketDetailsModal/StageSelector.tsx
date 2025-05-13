@@ -1,5 +1,5 @@
 import React from "react";
-import { useEntity } from "@replyke/core";
+import { useEntity } from "@replyke/react-js";
 import { Check } from "lucide-react";
 
 import { Command, CommandGroup, CommandItem, CommandList } from "../ui/command";

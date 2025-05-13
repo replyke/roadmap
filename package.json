@@ -1,6 +1,6 @@
 {
   "name": "@replyke/roadmap",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "author": "Replyke, maintained by Yanay Tsabary",
   "description": "A reusable React component library.",
   "keywords": [
@@ -36,9 +36,6 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "@replyke/comments-social-react-js": ">=4.0.12",
-    "@replyke/core": ">=4.0.27",
-    "@replyke/react-js": ">=4.0.27",
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
     "sonner": ">=2.0.0"
@@ -48,6 +45,8 @@
     "@radix-ui/react-popover": "^1.1.6",
     "@radix-ui/react-scroll-area": "^1.2.3",
     "@radix-ui/react-slot": "^1.1.2",
+    "@replyke/comments-social-react-js": "5.0.0-beta.32",
+    "@replyke/react-js": "5.0.0-beta.32",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -57,9 +56,6 @@
     "tailwind-merge": "^3.1.0"
   },
   "devDependencies": {
-    "@replyke/comments-social-react-js": "^4.0.12",
-    "@replyke/core": "^4.0.27",
-    "@replyke/react-js": "^4.0.27",
     "@tailwindcss/postcss": "^4.1.1",
     "@tailwindcss/vite": "^4.1.1",
     "@types/node": "^20.14.5",

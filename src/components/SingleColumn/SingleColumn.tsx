@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Entity, EntityProvider, useFeed } from "@replyke/core";
+import { Entity, EntityProvider, useEntityList } from "@replyke/react-js";
 import { AnimatePresence, motion } from "framer-motion";
 import { LoaderCircleIcon } from "lucide-react";
 import { Column } from "../column";
@@ -15,7 +15,7 @@ function SingleColumn({
   column: Column;
   setSelectedTicket: (ticket: Entity) => void;
 }) {
-  const { entities, resetting } = useFeed();
+  const { entities, resetting } = useEntityList();
   const [showInput, setShowInput] = useState(false);
 
   return (

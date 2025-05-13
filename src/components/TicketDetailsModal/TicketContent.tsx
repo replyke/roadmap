@@ -3,7 +3,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "../ui/dialog";
-import { Entity } from "@replyke/core";
+import { Entity } from "@replyke/react-js";
 
 function TicketContent({ selectedTicket }: { selectedTicket: Entity }) {
   return (

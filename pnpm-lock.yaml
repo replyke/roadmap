@@ -20,9 +20,18 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@18.3.20)(react@19.1.0)
+      '@replyke/comments-social-react-js':
+        specifier: 5.0.0-beta.32
+        version: 5.0.0-beta.32(@replyke/core@5.0.0-beta.32(react@19.1.0))(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@replyke/react-js':
+        specifier: 5.0.0-beta.32
+        version: 5.0.0-beta.32(react@19.1.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       cmdk:
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.3.6(@types/react@18.3.20))(@types/react@18.3.20)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -41,19 +50,10 @@ importers:
       react-dom:
         specifier: '>=18.0.0'
         version: 19.1.0(react@19.1.0)
-      sonner:
-        specifier: ^2.0.3
-        version: 2.0.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      tailwind-merge:
+        specifier: ^3.1.0
+        version: 3.1.0
     devDependencies:
-      '@replyke/comments-social-react-js':
-        specifier: ^4.0.12
-        version: 4.0.12(@replyke/core@4.0.27)(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
-      '@replyke/core':
-        specifier: ^4.0.27
-        version: 4.0.27
-      '@replyke/react-js':
-        specifier: ^4.0.27
-        version: 4.0.27
       '@tailwindcss/postcss':
         specifier: ^4.1.1
         version: 4.1.1
@@ -81,9 +81,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.3)
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       eslint:
         specifier: ^8.38.0
         version: 8.57.1
@@ -105,9 +102,9 @@ importers:
       rimraf:
         specifier: ^6.0.1
         version: 6.0.1
-      tailwind-merge:
-        specifier: ^3.1.0
-        version: 3.1.0
+      sonner:
+        specifier: ^2.0.3
+        version: 2.0.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       tailwindcss:
         specifier: ^4.1.1
         version: 4.1.1
@@ -143,8 +140,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/runtime@7.27.0':
-    resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
+  '@babel/runtime@7.27.1':
+    resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.27.0':
@@ -656,33 +653,38 @@ packages:
   '@radix-ui/rect@1.1.0':
     resolution: {integrity: sha512-A9+lCBZoaMJlVKcRBz2YByCG+Cp2t6nAnMnNba+XiWxnj6r4JUFqfsgwocMBZU9LPtdxC6wB56ySYpc7LQIoJg==}
 
-  '@replyke/comments-social-core@4.0.6':
-    resolution: {integrity: sha512-Jez8XKmyc1eYANlRSGjY5PUTA8qkqEJSZ/cX1S7c5+eCiD5RgMfEZ35H95n/wDwQ0B1Piy3q249gMPMtOJHaWw==}
+  '@replyke/comments-social-core@5.0.0-beta.32':
+    resolution: {integrity: sha512-u4aOwHCYFO3iZiZN5MQ1xTD2Sh4pft1nzuguWq+OvX6Rcspcxv+Q9ieF4gJaLHD/hGeMTwH1RW59bPdButfTdw==}
     peerDependencies:
-      '@replyke/core': '>=4'
-      react: '>=18.0.0 <20.0.0'
+      '@replyke/core': '>=5'
+      react: ^18.0.0 || ^19.0.0
 
-  '@replyke/comments-social-react-js@4.0.12':
-    resolution: {integrity: sha512-WPEcthBLQ9FCJwWhRkvvuer00ELzif3Id0hEQzNF7B/HbOYnxGO99KCFCQyFqQAI1z+alj9M3yKjYP2RzrS3Cw==}
+  '@replyke/comments-social-react-js@5.0.0-beta.32':
+    resolution: {integrity: sha512-yaVDzL4R6Ip7a1Tyw0BX/SBXqWAXcjXd/DIyOOV9dXkEyKCN7IwAvYFqgBOimAx5sllMNUfgmk24TEWBrvrZCg==}
     peerDependencies:
-      '@replyke/core': '>=4'
-      react: '>=18.0.0 <20.0.0'
-      react-dom: '>=18.0.0 <20.0.0'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^19.0.0
 
-  '@replyke/core@4.0.27':
-    resolution: {integrity: sha512-ckR5IZjAmhsTMQgue8mrGFX6sSNRq5okNXtLaZIocEhqJVXTJH5I8q9UwQQNIBLkb7hesdCqyFpZDDSKupQBSQ==}
-
-  '@replyke/react-js@4.0.27':
-    resolution: {integrity: sha512-DBu8nNblJoiNk8PQ0QsdSBenqu9Ojolmrmci12Vg5SyWM6NHCb2J0Q7oROM8nZw0xJeySnZo1r6os96/QKNSXw==}
-
-  '@replyke/ui-core-react-js@4.0.7':
-    resolution: {integrity: sha512-kt4lXvzQDeM1iy54yxUK5oWqfZXADrXoMhBjt+NFza8gtvA4CTP87Zs6gX6vgK/6Jpu6/3odgOWY40NjvquQWw==}
+  '@replyke/core@5.0.0-beta.32':
+    resolution: {integrity: sha512-Zumbp5Tpjg1G8F25JNimg9kB/FtVjkBURvt7RBfgrI/+I13E8aHtx9i2jAZqmJugi29RpzgsKJ2aMXZOzz9GvQ==}
     peerDependencies:
-      '@replyke/core': '>=4'
+      react: ^18.0.0 || ^19.0.0
+
+  '@replyke/react-js@5.0.0-beta.32':
+    resolution: {integrity: sha512-9B/dxoUywRoasP/7+DSrl6IGOMocu9om7y98NRTFe1sD/7AtfVeDW+6l7WMAU1MhfKX3wcOJMioeSF1vfJArRQ==}
+    peerDependencies:
+      react: ^18.0.0 || ^19.0.0
+
+  '@replyke/ui-core-react-js@5.0.0-beta.32':
+    resolution: {integrity: sha512-GQDG4BLH0sAG8LzSBJnhdtGQeEVBHegwT+bdi3QUyOeHNqN3/4pVxnbxxsXfa8b14a6724vtektMn6S5TkMdpA==}
+    peerDependencies:
+      '@replyke/core': '>=5'
       moment: ^2
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^19.0.0
 
-  '@replyke/ui-core@4.0.5':
-    resolution: {integrity: sha512-qbsoDSszCc5IajKgzHF7tXB7z4fvNGQMCorI3p2K8vw3pnDu1xbN+GfDOV1QEUXPJNvJgrGdkJa0AohDsvKRsg==}
+  '@replyke/ui-core@5.0.0-beta.32':
+    resolution: {integrity: sha512-RleKkgtoyFMS/O+qWwer+QX7D27DmkuxNDgSYVFDpnmKjOEcnPw0eG9UqsEdHgxxuV2yGBEmqZ1b+yy6ICc6fg==}
 
   '@rollup/pluginutils@5.1.4':
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
@@ -1164,8 +1166,8 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
 
-  axios@1.8.4:
-    resolution: {integrity: sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==}
+  axios@1.9.0:
+    resolution: {integrity: sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1862,10 +1864,6 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  node-forge@1.3.1:
-    resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
-    engines: {node: '>= 6.13.0'}
-
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
 
@@ -2101,9 +2099,6 @@ packages:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
     engines: {node: '>=0.10.0'}
 
-  regenerator-runtime@0.14.1:
-    resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
-
   relative-time-format@1.1.6:
     resolution: {integrity: sha512-aCv3juQw4hT1/P/OrVltKWLlp15eW1GRcwP1XdxHrPdZE9MtgqFpegjnTjLhi2m2WI9MT/hQQtE+tjEWG1hgkQ==}
 
@@ -2248,8 +2243,8 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  styled-components@6.1.17:
-    resolution: {integrity: sha512-97D7DwWanI7nN24v0D4SvbfjLE9656umNSJZkBkDIWL37aZqG/wRQ+Y9pWtXyBIM/NSfcBzHLErEsqHmJNSVUg==}
+  styled-components@6.1.18:
+    resolution: {integrity: sha512-Mvf3gJFzZCkhjY2Y/Fx9z1m3dxbza0uI9H1CbNZm/jSHCojzJhQ0R7bByrlFJINnMzz/gPulpoFFGymNwrsMcw==}
     engines: {node: '>= 16'}
     peerDependencies:
       react: '>= 16.8.0'
@@ -2477,9 +2472,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.27.0
 
-  '@babel/runtime@7.27.0':
-    dependencies:
-      regenerator-runtime: 0.14.1
+  '@babel/runtime@7.27.1': {}
 
   '@babel/types@7.27.0':
     dependencies:
@@ -2630,7 +2623,7 @@ snapshots:
       '@giphy/js-types': 5.1.0
       uuid: 9.0.1
 
-  '@giphy/react-components@10.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@giphy/react-components@10.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@giphy/colors': 1.0.1
       '@giphy/js-analytics': 5.0.0
@@ -2640,7 +2633,7 @@ snapshots:
       intersection-observer: 0.12.2
       react: 19.1.0
       react-use: 17.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      styled-components: 6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      styled-components: 6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       throttle-debounce: 3.0.1
     transitivePeerDependencies:
       - react-dom
@@ -2941,50 +2934,51 @@ snapshots:
 
   '@radix-ui/rect@1.1.0': {}
 
-  '@replyke/comments-social-core@4.0.6(@replyke/core@4.0.27)(react@19.1.0)':
+  '@replyke/comments-social-core@5.0.0-beta.32(@replyke/core@5.0.0-beta.32(react@19.1.0))(react@19.1.0)':
     dependencies:
-      '@replyke/core': 4.0.27
-      '@replyke/ui-core': 4.0.5
+      '@replyke/core': 5.0.0-beta.32(react@19.1.0)
+      '@replyke/ui-core': 5.0.0-beta.32
       react: 19.1.0
 
-  '@replyke/comments-social-react-js@4.0.12(@replyke/core@4.0.27)(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@replyke/comments-social-react-js@5.0.0-beta.32(@replyke/core@5.0.0-beta.32(react@19.1.0))(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
-      '@replyke/comments-social-core': 4.0.6(@replyke/core@4.0.27)(react@19.1.0)
-      '@replyke/core': 4.0.27
-      '@replyke/ui-core-react-js': 4.0.7(@replyke/core@4.0.27)(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@replyke/comments-social-core': 5.0.0-beta.32(@replyke/core@5.0.0-beta.32(react@19.1.0))(react@19.1.0)
+      '@replyke/ui-core-react-js': 5.0.0-beta.32(@replyke/core@5.0.0-beta.32(react@19.1.0))(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
     transitivePeerDependencies:
+      - '@replyke/core'
       - moment
       - styled-components
 
-  '@replyke/core@4.0.27':
+  '@replyke/core@5.0.0-beta.32(react@19.1.0)':
     dependencies:
-      axios: 1.8.4
+      axios: 1.9.0
       js-cookie: 3.0.5
       lodash: 4.17.21
-      node-forge: 1.3.1
+      react: 19.1.0
     transitivePeerDependencies:
       - debug
 
-  '@replyke/react-js@4.0.27':
+  '@replyke/react-js@5.0.0-beta.32(react@19.1.0)':
     dependencies:
-      '@replyke/core': 4.0.27
+      '@replyke/core': 5.0.0-beta.32(react@19.1.0)
+      react: 19.1.0
     transitivePeerDependencies:
       - debug
 
-  '@replyke/ui-core-react-js@4.0.7(@replyke/core@4.0.27)(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+  '@replyke/ui-core-react-js@5.0.0-beta.32(@replyke/core@5.0.0-beta.32(react@19.1.0))(moment@2.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@giphy/js-fetch-api': 5.6.0
-      '@giphy/react-components': 10.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
-      '@replyke/core': 4.0.27
+      '@giphy/react-components': 10.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+      '@replyke/core': 5.0.0-beta.32(react@19.1.0)
       moment: 2.30.1
+      react: 19.1.0
+      react-dom: 19.1.0(react@19.1.0)
     transitivePeerDependencies:
-      - react
-      - react-dom
       - styled-components
 
-  '@replyke/ui-core@4.0.5': {}
+  '@replyke/ui-core@5.0.0-beta.32': {}
 
   '@rollup/pluginutils@5.1.4(rollup@4.39.0)':
     dependencies:
@@ -3425,7 +3419,7 @@ snapshots:
       postcss: 8.5.3
       postcss-value-parser: 4.2.0
 
-  axios@1.8.4:
+  axios@1.9.0:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.2
@@ -4121,8 +4115,6 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  node-forge@1.3.1: {}
-
   node-releases@2.0.19: {}
 
   normalize-range@0.1.2: {}
@@ -4275,8 +4267,6 @@ snapshots:
 
   react@19.1.0: {}
 
-  regenerator-runtime@0.14.1: {}
-
   relative-time-format@1.1.6: {}
 
   require-from-string@2.0.2: {}
@@ -4330,7 +4320,7 @@ snapshots:
 
   rtl-css-js@1.16.1:
     dependencies:
-      '@babel/runtime': 7.27.0
+      '@babel/runtime': 7.27.1
 
   run-parallel@1.2.0:
     dependencies:
@@ -4416,7 +4406,7 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-components@6.1.17(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  styled-components@6.1.18(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       '@emotion/is-prop-valid': 1.2.2
       '@emotion/unitless': 0.8.1

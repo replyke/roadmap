@@ -2,9 +2,9 @@ import { useState } from "react";
 import {
   Entity,
   EntityProvider,
-  FeedProvider,
+  EntityListProvider,
   ReplykeProvider,
-} from "@replyke/core";
+} from "@replyke/react-js";
 import SingleColumn from "./SingleColumn";
 import { columns } from "../constants/columns-data";
 import TicketDetailsModal from "./TicketDetailsModal";
@@ -37,8 +37,8 @@ function Roadmap({
         </EntityProvider>
         <div className="w-max flex gap-4 h-full">
           {columns.map((column) => (
-            <FeedProvider
-              resource="roadmap"
+            <EntityListProvider
+              sourceId="roadmap"
               metadataFilters={{
                 includes: {
                   stage: column.id,
@@ -53,7 +53,7 @@ function Roadmap({
                   setSelectedTicketStage(column.id);
                 }}
               />
-            </FeedProvider>
+            </EntityListProvider>
           ))}
         </div>
       </Dialog>

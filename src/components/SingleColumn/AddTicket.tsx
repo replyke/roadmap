@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
-import { useFeed } from "@replyke/core";
+import { useEntityList } from "@replyke/react-js";
 import { toast } from "sonner";
 import { LoaderCircle } from "lucide-react";
 
@@ -12,7 +12,7 @@ const TITLE_MAX = 120;
 const DESCRIPTION_MAX = 500;
 
 export default function AddTicket() {
-  const { createEntity } = useFeed();
+  const { createEntity } = useEntityList();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -25,16 +25,14 @@ export default function AddTicket() {
       return;
     }
 
-    if (
-      description.length > DESCRIPTION_MAX
-    ) {
+    if (description.length > DESCRIPTION_MAX) {
       toast("Please try to shorten your description");
       return;
     }
 
     setSubmitting(true);
     await createEntity?.({
-      resource: "roadmap",
+      sourceId: "roadmap",
       title,
       content: description,
       metadata: {

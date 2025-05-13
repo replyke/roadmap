@@ -1,4 +1,4 @@
-import { useEntity } from "@replyke/core";
+import { useEntity } from "@replyke/react-js";
 import { ChevronUp } from "lucide-react";
 import { cn } from "../../utils/cn";
 

@@ -1,4 +1,4 @@
-import { Entity, useEntity } from "@replyke/core";
+import { Entity, useEntity } from "@replyke/react-js";
 import { MessageSquare } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { DialogTrigger } from "../ui/dialog";

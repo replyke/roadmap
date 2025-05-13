@@ -1,4 +1,4 @@
-import { Entity, getUserName, useUser } from "@replyke/core";
+import { Entity, getUserName, useUser } from "@replyke/react-js";
 import UpvoteButton from "../shared/UpvoteButton";
 import StageBadge from "../shared/StageBadge";
 import { Flag } from "lucide-react";

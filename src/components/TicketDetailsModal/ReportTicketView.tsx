@@ -6,9 +6,9 @@ import {
   ReportReasonKey,
   reportReasons,
   useEntity,
-  useSubmitReport,
+  useCreateReport,
   useUser,
-} from "@replyke/core";
+} from "@replyke/react-js";
 import { Flag, LoaderCircle, X } from "lucide-react";
 import { cn } from "../../utils/cn";
 import { Button } from "../ui/button";
@@ -21,7 +21,7 @@ function ReportTicketView({
   const { user } = useUser();
   console.log({ user: user });
   const { entity } = useEntity();
-  const { submitEntityReport } = useSubmitReport();
+  const { createEntityReport } = useCreateReport();
 
   const [submitting, setSubmitting] = useState(false);
   const [reason, setReason] = useState<ReportReasonKey | null>(null);
@@ -38,7 +38,7 @@ function ReportTicketView({
       }
 
       setSubmitting(true);
-      await submitEntityReport({ targetId: entity.id, reason });
+      await createEntityReport({ targetId: entity.id, reason });
       hideReportTicketView();
       setReason(null);
       toast.success("Report submitted successfully");
